@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Dokterkulitku</title>
+
+  <!-- CSS  -->
+  <link rel="shortcut icon" href="img/logo.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+
+</head>
+<body style="overflow-y: hidden; overflow-x: hidden;">
+
+<section>
+  <div class="row" style="background-color: #FFD2D2; margin-top: 3em; padding-bottom: 5em;">
+     <div class="col s6">
+      <center><h4 style="margin-top: 4em; color: #000;"> ADD PERMASALAHAN KULIT </h4></center>
+
+          <center><form class="col s12">
+      <div class="row" style="margin-left: 8em;">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">event_note</i>
+          <input id="permasalahankulit" type="text" class="validate" style="border-bottom: solid 1px #000;" >
+          <label for="permasalahankulit" style="color: #000;">Input Permasalahan Kulit</label>
+        </div>
+        
+      </div>
+    </form></center>
+   <center> <button class="btn waves-effect  waves-light light-blue lighten-1" type="submit" name="action" onclick="window.location.href=''">Submit
+    <i class="material-icons right" >send</i>
+  </button></center>
+        
+    </div>
+    <div class="col s6" >
+      <center><img src="img/a.png" class="responsive-img" style="margin-top: 8em;"></center>
+      <a style="float: right;"  href="permasalahankulit.html" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_back</i></a>
+    </div>
+  </div>
+</section>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+   <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems, options);
+    });
+    // Or with jQuery
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+  </script>
+
+</body>
+</html>

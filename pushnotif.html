@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Dokterkulitku</title>
+
+  <!-- CSS  -->
+  <link rel="shortcut icon" href="img/logo.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+
+</head>
+<body style=" overflow-x: hidden; background-color: #dfbf9c;">
+
+<section>
+  <div class="row" style="background-color: #dfbf9c;">
+     <div class="col s6" >
+      <center><h4 style="margin-top: 0.5em; color: #fff;"> USER PUSH NOTIFICATION </h4></center>
+
+
+
+          <center><form class="col s12">
+      <div class="row" style="margin-left: 8em;">
+
+        <div class="input-field col s12">
+          <i class="material-icons prefix">edit</i>
+          <input id="title" type="text" class="validate" style="border-bottom: solid 1px #000;" >
+          <label for="title" style="color: #fff;">Title</label>
+        </div>
+
+        <div class="input-field col s12">
+          <i class="material-icons prefix">dehaze</i>
+          <input id="sub" type="text" class="validate" style="border-bottom: solid 1px #000;" >
+          <label for="sub" style="color: #fff;">Subtitle</label>
+        </div>
+
+        <div class="input-field col s12">
+          <i class="material-icons prefix">date_range</i>
+          <input id="date" type="text" class="datepicker" style="border-bottom: solid 1px #000;">
+          <label for="date" style="color: #fff;">Tanggal</label>
+        </div>
+
+         <div class="input-field col s12">
+          <i class="material-icons prefix">assignment</i>
+          <textarea id="textarea1" class="materialize-textarea" style="border-bottom: solid 1px #000; height: 250px;"></textarea>
+          <label for="textarea1" style="color: #fff;">Keterangan</label>
+        </div>
+
+         <div class="input-field col s12">
+          <i class="material-icons prefix">link</i>
+          <input id="link" type="text" class="validate" style="border-bottom: solid 1px #000;" >
+          <label for="link" style="color: #fff;">Link</label>
+        </div>
+
+        <div class="file-field input-field col s12">
+      <div class="btn">
+        <span>Upload Gambar</span>
+        <input type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" style="border-bottom: solid 1px #000;" >
+
+      </div>
+    </div>
+
+   
+   <div class="input-field col s12">
+    <select id="user"  style="border-bottom: solid 1px #000;" >
+      <option value="" disabled selected>Choose your option</option>
+      <option id="alluser" value="all" name=""  >All User</option>
+      <option id="targeteduser" value="target" name="" >Targeted User</option>
+    </select>
+    <label style="color: #fff; font-size: 14px;">Send To:</label>
+  </div>
+
+<!-- content targeted user -->
+  <div id="target" class="colors"  style="display:none; margin-left: 2em;">
+
+     <div class="input-field col s12">
+    <select style="border-bottom: solid 1px #000;" >
+      <option value="" disabled selected>Choose your option</option>
+      <option value="a"> Berminyak </option>
+      <option value="b"> Kering </option>
+      <option value="c"> Normal </option>
+      <option value="c"> All </option>
+
+
+    </select>
+    <label style="color: #fff; font-size: 14px;">Jenis Kulit :</label>
+  </div>
+
+
+    <div class="input-field col s12">
+    <select multiple>
+      <option value="" disabled selected>Choose your problem</option>
+      <option value="">Jerawat Meradang</option>
+      <option value="">Komedo</option>
+      <option value="">Jerawat Kecil-kecil (whiteheads) </option>
+      <option value="">Flek</option>
+      <option value="">Urat Halus</option>
+      <option value="">Muka Mudah Merah</option>
+      <option value="">Bekas Jerawat Merah</option>
+      <option value="">Pori-pori Besar</option>
+      <option value="">Bopeng</option>
+      <option value="">Kulit Kusam</option>
+      <option value="">Dagung Tumbuh</option>
+      <option value="">Kulit Kering</option>
+      <option value="">Noda Bekas Jerawat</option>
+    </select>
+    <label style="color: #fff; font-size: 14px;">Tipe Permasalahan Kulit :</label>
+  </div>
+
+   <div class="input-field col s12">
+    <select style="border-bottom: solid 1px #000;" >
+      <option value="" disabled selected>Choose your age</option>
+      <option value="a"> < 18 year </option>
+      <option value="b">18 - 35 year</option>
+      <option value="c">> 35 year</option>
+
+    </select>
+    <label style="color: #fff; font-size: 14px;">Age :</label>
+  </div>
+
+</div>
+<!-- end content targeted -->
+
+        
+      </div>
+    </form></center>
+   <center> <button class="btn waves-effect  waves-light red lighten-2" type="submit" name="action" onclick="window.location.href=''">Send
+    <i class="material-icons right" >send</i>
+  </button></center>
+        
+    </div>
+    <div class="col s6" >
+      <center><img src="img/d.png" class="responsive-img" style="margin-top: 2em;"></center>
+       <!-- <a style="float: right;"  href="jeniskulit.html" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_back</i></a> -->
+    </div>
+  </div>
+</section>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+
+  <script type="text/javascript">
+        $(function() {
+        $('#user').change(function(){
+            $('.colors').hide();
+            $('#' + $(this).val()).show();
+        });
+    });
+  </script>
+
+   <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems, options);
+    });
+    // Or with jQuery
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+  </script>
+
+  <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+       
+  </script>
+
+</body>
+</html>
